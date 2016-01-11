@@ -5,6 +5,8 @@ Godocs: [jsonp](http://godoc.org/github.com/golangplus/encoding/json)
 
 ## Featured
 ```go
+package jsonp
+
 // MarshalToFile encodes a data into a JSON file.
 func MarshalToFile(v interface{}, filename string) error {...}
 

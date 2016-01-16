@@ -48,3 +48,7 @@ func TestUnmarshalFile_Failed(t *testing.T) {
 	var s T
 	assert.Error(t, UnmarshalFile(fn, &s))
 }
+
+func TestMarshalIgnoreError(t *testing.T) {
+	assert.Equal(t, "MarshalIgnoreError", string(MarshalIgnoreError(T{S: "abc"})), `{"S":"abc"}`)
+}

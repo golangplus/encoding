@@ -24,3 +24,10 @@ func UnmarshalFile(filename string, v interface{}) error {
 	defer f.Close()
 	return json.NewDecoder(f).Decode(v)
 }
+
+// MarshalIgnoreError call json.Marshal and ignores the error.
+// Use this function when you are sure the error will not happen.
+func MarshalIgnoreError(v interface{}) []byte {
+	res, _ := json.Marshal(v)
+	return res
+}
